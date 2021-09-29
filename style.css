@@ -1,0 +1,20 @@
+.color_btn {
+  cursor: pointer;
+}
+
+#shadow_Image {
+  pointer-events: none;
+}
+
+.g_to_interact:hover {
+  fill: gray;
+  cursor: pointer;
+}
+
+#shadow_Image-2 {
+  pointer-events: none;
+}
+
+#buttons {
+  padding: 20px;
+}
