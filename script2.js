@@ -1,8 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", start);
-// let elementToPaint = [];
-let elementToPaint = "none";
+let elementToPaint = [];
 
 async function start() {
   let response = await fetch("new_balance_992-01.svg");
@@ -37,21 +36,20 @@ function init() {
 }
 
 function setElement(element) {
-  elementToPaint = element;
-
-  // elementToPaint.push(element);
-  console.log(element);
+  elementToPaint.push(element);
+  console.log(elementToPaint);
 }
 
 function setColor(color) {
   console.log(color);
-  elementToPaint.style.fill = color;
-
-  // elementToPaint[0].style.fill = color;
-  // elementToPaint[1].style.fill = color;
-  // elementToPaint[2].style.fill = color;
-  // elementToPaint[3].style.fill = color;
-  // elementToPaint = [];
+  for (let i = 0; i < elementToPaint.length; i++) {
+    elementToPaint[i].style.fill = color;
+  }
+  //   elementToPaint[0].style.fill = color;
+  //   elementToPaint[1].style.fill = color;
+  //   elementToPaint[2].style.fill = color;
+  //   elementToPaint[3].style.fill = color;
+  elementToPaint = [];
 }
 
 // how to add the same colours to all of the paths in the ".g_to_interact"
